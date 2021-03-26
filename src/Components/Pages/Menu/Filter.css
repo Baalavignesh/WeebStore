@@ -1,0 +1,19 @@
+.filter-box {
+    background-color: blanchedalmond;
+    font-family: "inter", sans-serif;
+    display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+    border-radius: 5px;
+    /* height: 60vh; */
+}
+
+.filter-heading {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 50px;
+}
+
+.filter-button {
+    align-items: center;
+}
