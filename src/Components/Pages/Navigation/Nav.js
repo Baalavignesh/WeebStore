@@ -43,11 +43,6 @@ function Nav() {
             classes={classes}
             style={searchBox}
             placeholder="Search poster and products"
-            // startAdornment={
-            //   <InputAdornment position="start">
-            //     <Search />
-            //   </InputAdornment>
-            // }
           ></input>
         </Grid>
         <Grid item xs={12}md={2} lg={2}>

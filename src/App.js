@@ -4,6 +4,7 @@ import Nav from "./Components/Pages/Navigation/Nav"
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Home from './Components/Pages/Home/Home';
 import AllProducts from './Components/Pages/Menu/AllProducts';
+import ViewProduct from './Components/Pages/ViewProduct/ViewProduct';
 
 function App() {
   return (
@@ -14,8 +15,10 @@ function App() {
             <Route path = "/" exact component = {Home} />
             <Route path = "/cart" component = {Cart} />
             <Route path = "/menu" component = {AllProducts} /> 
-          </Switch>
+            <Route path = "/product/:id" component = {ViewProduct} />
 
+          </Switch>
+    
       </div>
     </Router>
     
