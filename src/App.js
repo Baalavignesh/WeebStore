@@ -3,7 +3,7 @@ import Cart from "./Components/Pages/Cart/Cart"
 import Nav from "./Components/Pages/Navigation/Nav"
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Home from './Components/Pages/Home/Home';
-import AllProducts from './Components/Pages/Menu/AllProducts';
+import AllProducts from './Components/Pages/ProductPage/AllProducts';
 import ViewProduct from './Components/Pages/ViewProduct/ViewProduct';
 
 function App() {
@@ -14,11 +14,11 @@ function App() {
           <Switch>
             <Route path = "/" exact component = {Home} />
             <Route path = "/cart" component = {Cart} />
-            <Route path = "/menu" component = {AllProducts} /> 
+            <Route path = "/products" component = {AllProducts} /> 
             <Route path = "/product/:id" component = {ViewProduct} />
 
           </Switch>
-    
+
       </div>
     </Router>
     

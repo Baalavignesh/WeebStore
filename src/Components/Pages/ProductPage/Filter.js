@@ -3,7 +3,7 @@ import "./Filter.css";
 import { Button } from "@material-ui/core";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
-import Favorite from "@material-ui/icons/Favorite";
+  import Favorite from "@material-ui/icons/Favorite";
 import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
 
 class Filter extends Component {
@@ -18,6 +18,8 @@ class Filter extends Component {
       { id: "2", name: "Demon Slayer" },
       { id: "3", name: "Naruto" },
       { id: "4", name: "Jujutsu Kaisen" },
+      { id: "5", name: "One Piece" },
+      { id: "6", name: "Dragon Ball Z" },
     ],
 
     sAnime: [],

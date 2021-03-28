@@ -1,9 +1,6 @@
 import "./Nav.css";
 import { Link } from "react-router-dom";
 import { Grid } from "@material-ui/core";
-// import { Search } from "@material-ui/icons";
-// import Input from '@material-ui/core/Input';
-// import InputAdornment from '@material-ui/core/InputAdornment';
 import { makeStyles } from '@material-ui/core/styles';
 
 function Nav() {
@@ -20,6 +17,7 @@ function Nav() {
   const headfont = {
     fontFamily: "inter, sans-serif",
     marginTop: "10px",
+    textAlign: "center"
   };
 
 
@@ -48,8 +46,8 @@ function Nav() {
         <Grid item xs={12}md={2} lg={2}>
           <div className="nav-right">
             <ul className="nav-links">
-              <Link to="/menu" className="nav-style-buttons">
-                <li>Menu</li>
+              <Link to="/products" className="nav-style-buttons">
+                <li>Products</li>
               </Link>
 
               <Link to="/cart" className="nav-style-buttons">

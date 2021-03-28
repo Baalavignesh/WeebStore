@@ -5,7 +5,6 @@
   flex-direction: column;
   justify-content: space-evenly;
     border-radius: 5px;
-    /* height: 60vh; */
 }
 
 .filter-heading {
@@ -16,4 +15,5 @@
 
 .filter-button {
     align-items: center;
+    margin: 20px;
 }

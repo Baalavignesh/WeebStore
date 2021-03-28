@@ -4,18 +4,17 @@ import "./ProductsCard.css";
 
 const ProductCard = (props) => {
   return (
-<Link to={`${props.url}/${props.data.id}`} className = "full-card">
+    <Link to={`${props.url}/${props.data.p_id}`} className="full-card">
       <div className="single-card" onClick={props.click} key={props.data.id}>
         <img
-          src={props.data.url}
+          src={props.data.p_image}
           className="card-image"
-          alt={props.data.name}
+          alt={props.data.p_name}
         ></img>
-        <p className="product-name">{props.data.name}</p>
-        <p className="product-price">₹{props.data.price}</p>
+        <p className="product-name">{props.data.p_name}</p>
+        <p className="product-price">₹{props.data.p_price}</p>
       </div>
     </Link>
-    
   );
 };
 
