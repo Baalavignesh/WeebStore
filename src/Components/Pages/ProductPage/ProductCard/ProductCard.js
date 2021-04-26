@@ -1,6 +1,8 @@
 import { React } from "react";
 import { Link } from "react-router-dom";
 import "./ProductsCard.css";
+import Typography from '@material-ui/core/Typography';
+
 
 const ProductCard = (props) => {
   return (
@@ -11,7 +13,10 @@ const ProductCard = (props) => {
           className="card-image"
           alt={props.data.p_name}
         ></img>
-        <p className="product-name">{props.data.p_name}</p>
+        <Typography variant="inherit" className="product-name" noWrap>
+        {props.data.p_name}
+          </Typography>
+        {/* <p className="product-name">{props.data.p_name}</p> */}
         <p className="product-price">₹{props.data.p_price}</p>
       </div>
     </Link>

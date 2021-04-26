@@ -1,0 +1,52 @@
+.popup_window {
+  /* display: block;
+  width: 100%; */
+}
+
+
+.form-dialog-title {
+  text-align: center;
+
+
+}
+
+.popup-text {
+    text-align: center;
+}
+
+.sign-up-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.line-center{
+  margin:0;padding:0 10px;
+  background:#fff;
+  display:inline-block;
+}
+.popup-text-or{
+
+  text-align:center;
+  position:relative;
+  z-index:2;
+
+}
+.popup-text-or:after{
+  content:"";
+  position:absolute;
+  top:50%;
+  left:0;
+  right:0;
+  border-top:solid 1px black;
+  z-index:-1;
+}
+
+
+.signin-input {
+  padding-top: 5px;
+  margin-top: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+}

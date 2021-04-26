@@ -1,5 +1,6 @@
+
+
 .main-nav {
-    
     display: flex;
     justify-content: space-around;
     background-color: white;
@@ -10,25 +11,24 @@
     margin-bottom: 12px;    
 }
 
-.search-box {
-    width: 100%;
-    padding: "12px 20px";
-    border: "1px";
-    border-style:  "solid";
-    border-color:  "#ccc";
-    border-radius: "4px";
-    box-sizing: "border-box";
+.nav-bar-heading {
+    font-family : "inter", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align:  "center";
 }
 
 .nav-right {
     display: flex;
     justify-content: center;
+    text-decoration: none;
 }
 ul.nav-links {
     list-style: none;
+    text-decoration: none;
     display: flex;
-    justify-items: flex-end;
-    justify-self: flex-end;
     font-size: large;
 }
 
@@ -39,9 +39,11 @@ ul.nav-links {
 
 
 .nav-style-buttons {
+    color: black;
     text-decoration: none;
     margin: 10px;
     padding: 10px;
+    cursor: pointer;
 }
 
 input[type=text]:focus{

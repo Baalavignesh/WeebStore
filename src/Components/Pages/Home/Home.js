@@ -3,6 +3,7 @@ import stickers from "../../Images/stickers.jpg";
 import poster from "../../Images/poster.jpg";
 import Carosol from "./Carousel";
 import { Grid } from "@material-ui/core";
+import Nav from "../Navigation/Nav"
 
 function Home() {
   const footerStyle = {
@@ -16,6 +17,7 @@ function Home() {
 
   return (
     <div className="main-body">
+      <Nav />
       <Grid container>
         <Grid item xs={12}>
           <Carosol />

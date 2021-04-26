@@ -1,0 +1,121 @@
+import { useState, useEffect, Component } from "react";
+import "./Popup.css";
+
+import Dialog from "@material-ui/core/Dialog";
+import DialogActions from "@material-ui/core/DialogActions";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogContentText from "@material-ui/core/DialogContentText";
+import DialogTitle from "@material-ui/core/DialogTitle";
+import Button from "@material-ui/core/Button";
+import PhoneInput from "react-phone-input-2";
+import TextField from "@material-ui/core/TextField";
+import "react-phone-input-2/lib/style.css";
+
+// import { useDispatch } from "react-redux";
+import { connect } from 'react-redux';
+
+import firebase from "firebase";
+import { setLogged } from "../../../Actions/actionIsLogged";
+import { StyledFirebaseAuth } from "react-firebaseui";
+import firebaseConfig from "../../../Services/firebase";
+
+if (firebase.apps.length === 0) {
+  firebase.initializeApp(firebaseConfig);
+}
+
+
+class Popup extends Component {
+  
+
+  uiConfig = {
+    signInFlow: "popup",
+    signInOptions: [
+      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+      firebase.auth.EmailAuthProvider.PROVIDER_ID,
+    ],
+    callbacks: {
+      signInSuccessWithAuthResult: () => false,
+    },
+  };
+
+  componentDidMount() {
+    // let dispatch = useDispatch();
+    console.log('whyy')
+    firebase.auth().onAuthStateChanged((user) => this.props.setLogged());
+  }
+
+  render() {
+    return (
+      <div className="main-popup">
+        <Dialog
+          open={this.props.setOpenVal}
+          onClose={this.props.handleMethod}
+          aria-labelledby="form-dialog-title"
+          className="popup_window"
+          // fullWidth={true}
+          // maxWidth={"sm"}
+        >
+          <DialogTitle id="form-dialog-title" className="form-dialog-title">
+            Sign-In
+          </DialogTitle>
+          <DialogContent>
+            <DialogContentText className="popup-text">
+              Sign-In with E-Mail
+            </DialogContentText>
+            <TextField
+              autoFocus
+              margin="dense"
+              id="name"
+              label="Email Address"
+              type="email"
+              className="signin-input"
+              fullWidth
+            />
+            <TextField
+              autoFocus
+              margin="dense"
+              id="password"
+              label="password"
+              type="password"
+              className="signin-input"
+              fullWidth
+            />
+            {/* <PhoneInput country={"in"} value={phone} onChange={setPhone} /> */}
+            <div className="sign-up-button">
+              <Button
+                // onClick={createAccount}
+                color="primary"
+                variant="contained"
+              >
+                Sign-In
+              </Button>
+            </div>
+            <DialogContentText className="popup-text-or">
+              <span class="line-center">or</span>
+            </DialogContentText>
+
+            <StyledFirebaseAuth
+              uiConfig={this.uiConfig}
+              firebaseAuth={firebase.auth()}
+            />
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={this.props.handleMethod} color="primary">
+              Cancel
+            </Button>
+          </DialogActions>
+        </Dialog>
+      </div>
+    );
+  }
+}
+
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setLogged: () => dispatch(setLogged())
+  }
+};
+
+
+export default connect(null, mapDispatchToProps)(Popup);

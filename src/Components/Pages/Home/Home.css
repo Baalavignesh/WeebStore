@@ -23,7 +23,6 @@
 .home-image {
     position: relative;
     text-align: center;
-    background-color: orchid;
     color: white;
     filter: brightness(100%);
     width: 100%;
@@ -37,7 +36,7 @@
 .items-cards{
     position: relative;
     justify-content: center;
-    margin: 30px;
+    margin: 25px;
     cursor: pointer;
 
 }
@@ -49,8 +48,8 @@
     background-color: rgb(255, 255, 255);
     box-shadow: 2px 2px 5px black;
     user-select: none;
-    font-size: 24px;
-    padding: 10px;
+    font-size: 28px;
+    padding: 15px;
     top: 80%;
     left: 50%;
     transform: translate(-50%, -80%);
@@ -60,7 +59,7 @@
     height: 50vh;
     overflow: hidden;
     border-radius: 25px;
-    border: 2px solid black;
+    border: 1px solid grey;
 }
 
 .items-cards:hover > .home-image{
@@ -72,7 +71,7 @@
 }
 
 .footer {
-    background-color: blanchedalmond;
+    background-color: #F2F2F2;
     color: black;
     display: flex;
     justify-content: space-around;

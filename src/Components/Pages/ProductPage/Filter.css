@@ -1,19 +1,26 @@
 .filter-box {
-    background-color: blanchedalmond;
+    /* background-color: #f0e5e5; */
+    background-color: rgb(243, 243, 243);
     font-family: "inter", sans-serif;
     display: flex;
   flex-direction: column;
   justify-content: space-evenly;
     border-radius: 5px;
+    text-align: center;
 }
 
 .filter-heading {
     font-size: 24px;
     font-weight: 500;
     line-height: 50px;
+    text-align: center;
 }
 
 .filter-button {
     align-items: center;
     margin: 20px;
+}
+
+.filter-list-anime {
+    width: 100%;
 }

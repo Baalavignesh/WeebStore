@@ -8,6 +8,7 @@ import axios from "axios";
 import ViewProduct from "../ViewProduct/ViewProduct";
 import Loading from "../../Images/gojo_loading.gif";
 import FadeIn from "react-fade-in";
+import Nav from "../Navigation/Nav"
 
 function AllProducts() {
   const [loading, setLoading] = useState(true);
@@ -40,9 +41,10 @@ function AllProducts() {
 
   return (
     <div>
+      <Nav />
       <Grid container>
         <Route path={`${url}/:productId`}>
-          <ViewProduct data={selectedProduct}/>
+          <ViewProduct data={selectedProduct} />
         </Route>
         <Route exact path={url}>
           <Grid item xs={12} sm={12} md={3} lg={3}>
@@ -64,7 +66,7 @@ function AllProducts() {
               </div>
             ) : (
               <div>
-                <h1>All Products</h1>
+                <h1 style = {{textAlign: "center", padding: "10px"}}>All Products</h1>
                 <FadeIn>
                   <div className="all-cards">
                     {products.map((product, index) => {
